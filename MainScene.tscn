@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjhywhhlq8ra2"]
+[gd_scene load_steps=5 format=3 uid="uid://cjhywhhlq8ra2"]
 
 [ext_resource type="PackedScene" uid="uid://clgbt8qey0ch3" path="res://scenes/environment/Water.tscn" id="1_obdkr"]
-[ext_resource type="PackedScene" uid="uid://cmglr1ujrhlmn" path="res://scenes/creatures/Creature.tscn" id="2_v5svl"]
+[ext_resource type="PackedScene" uid="uid://cmglr1ujrhlmn" path="res://scenes/creatures/dave.tscn" id="2_v5svl"]
+[ext_resource type="PackedScene" uid="uid://bljjlkxxiywpn" path="res://scenes/creatures/gloop.tscn" id="3_n5t27"]
+[ext_resource type="PackedScene" uid="uid://c1n1el7iwtwo5" path="res://scenes/creatures/zip.tscn" id="4_vdlnc"]
 
 [node name="Scene" type="Node2D"]
 
@@ -23,21 +25,24 @@ scale = Vector2(0.562198, 0.562198)
 
 [node name="Bounds" type="StaticBody2D" parent="World"]
 
-[node name="Creature2" parent="." instance=ExtResource("2_v5svl")]
-position = Vector2(934, 238)
-scale = Vector2(0.229551, 0.229551)
-
 [node name="Creature" parent="." instance=ExtResource("2_v5svl")]
-position = Vector2(693, 367)
+position = Vector2(346, 228)
 
-[node name="Creature3" parent="." instance=ExtResource("2_v5svl")]
-position = Vector2(842, 406)
+[node name="Creature2" parent="." instance=ExtResource("2_v5svl")]
+position = Vector2(540, 334)
 
-[node name="Creature4" parent="." instance=ExtResource("2_v5svl")]
-position = Vector2(1011, 326)
+[node name="Creature3" parent="." instance=ExtResource("3_n5t27")]
+position = Vector2(557, 199)
+scale = Vector2(0.222536, 0.222536)
 
-[node name="Creature5" parent="." instance=ExtResource("2_v5svl")]
-position = Vector2(80, 606)
+[node name="Creature4" parent="." instance=ExtResource("3_n5t27")]
+position = Vector2(353, 347)
+scale = Vector2(0.222536, 0.222536)
 
-[node name="Creature6" parent="." instance=ExtResource("2_v5svl")]
-position = Vector2(28, 26)
+[node name="Creature5" parent="." instance=ExtResource("4_vdlnc")]
+position = Vector2(720, 412)
+scale = Vector2(0.222536, 0.222536)
+
+[node name="Creature6" parent="." instance=ExtResource("4_vdlnc")]
+position = Vector2(423, 115)
+scale = Vector2(0.222536, 0.222536)

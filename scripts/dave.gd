@@ -1,10 +1,10 @@
-extends CharacterBody2D
-class_name BaseCreature  # This makes it easier to inherit from
+extends BaseCreature
+class_name dave
 
 @export var speed: float = 100.0
-@export var energy: float = 10.0
+@export var energy: float = 100.0
 @export var energy_drain_rate: float = 1.0
-@export var center_weight: float = 0.3  # Adjust this for stronger/weaker pull
+@export var center_weight: float = 0.5  # Adjust this for stronger/weaker pull
 
 var direction = Vector2.ZERO
 var screen_size = Vector2.ZERO  # Tracks screen size for bounds
