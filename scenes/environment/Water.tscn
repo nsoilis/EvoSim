@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://clgbt8qey0ch3"]
+[gd_scene load_steps=5 format=3 uid="uid://clgbt8qey0ch3"]
 
+[ext_resource type="Script" path="res://scenes/environment/water.gd" id="1_nklp6"]
 [ext_resource type="Texture2D" uid="uid://r0mbofo25wj5" path="res://scenes/environment/Pond.png" id="1_so3mg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0qayo"]
-size = Vector2(5.8456, 20.2963)
+size = Vector2(7.07934, 20.2963)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpbkw"]
+size = Vector2(276.414, 116)
 
 [node name="Water" type="StaticBody2D"]
+script = ExtResource("1_nklp6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1.00006, 3.05176e-05)
@@ -17,3 +22,14 @@ position = Vector2(-4.5, 2.5)
 rotation = -3.14159
 scale = Vector2(34.0427, -5.37043)
 shape = SubResource("RectangleShape2D_0qayo")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1.03959, 1.15429)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4.5, 2)
+shape = SubResource("RectangleShape2D_hpbkw")
+debug_color = Color(0.627966, 0.530734, 0, 0.42)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

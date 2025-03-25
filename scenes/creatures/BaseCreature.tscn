@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://cmglr1ujrhlmn"]
+
+[ext_resource type="Script" path="res://scripts/creature.gd" id="1_we4iu"]
+[ext_resource type="Texture2D" uid="uid://ct5wr38n4k2pk" path="res://scenes/creatures/Dave.png" id="2_ixlea"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aw6n3"]
+radius = 80.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pgtyj"]
+radius = 91.1976
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rpse6"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0.105882, 0.168627, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5tvm"]
+bg_color = Color(0.203922, 0.596078, 0.858824, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kojxt"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0nxlh"]
+bg_color = Color(0.152941, 0.682353, 0.376471, 1)
+
+[node name="Creature" type="CharacterBody2D"]
+scale = Vector2(0.222536, 0.222536)
+script = ExtResource("1_we4iu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ixlea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -2)
+shape = SubResource("CircleShape2D_aw6n3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_pgtyj")
+debug_color = Color(0.614164, 0.48548, 0.621163, 0.42)
+
+[node name="WaterBar" type="ProgressBar" parent="."]
+offset_left = -85.3793
+offset_top = -125.822
+offset_right = 89.6207
+offset_bottom = -98.8221
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_rpse6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_g5tvm")
+value = 100.0
+show_percentage = false
+
+[node name="EnergyBar" type="ProgressBar" parent="."]
+offset_left = -85.0
+offset_top = -162.0
+offset_right = 90.0
+offset_bottom = -135.0
+size_flags_horizontal = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_kojxt")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0nxlh")
+value = 100.0
+show_percentage = false

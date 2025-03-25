@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bljjlkxxiywpn"]
 
-[ext_resource type="PackedScene" uid="uid://cmglr1ujrhlmn" path="res://scenes/creatures/dave.tscn" id="1_xp6bx"]
+[ext_resource type="PackedScene" uid="uid://cmglr1ujrhlmn" path="res://scenes/creatures/BaseCreature.tscn" id="1_xp6bx"]
 [ext_resource type="Script" path="res://scripts/gloop.gd" id="2_8v025"]
 [ext_resource type="Texture2D" uid="uid://bukthjdfmeyi4" path="res://scenes/creatures/Gloop.png" id="2_f5y3p"]
 

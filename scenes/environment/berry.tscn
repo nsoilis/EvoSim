@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw7yqx4b2k7hx"]
+
+[ext_resource type="Texture2D" uid="uid://dmm0527huonkf" path="res://scenes/environment/Berry.png" id="1_5cut7"]
+
+[node name="Berry" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.483605, 0.483605)
+texture = ExtResource("1_5cut7")
