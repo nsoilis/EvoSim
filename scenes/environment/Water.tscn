@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://clgbt8qey0ch3"]
+
+[ext_resource type="Texture2D" uid="uid://r0mbofo25wj5" path="res://scenes/environment/Pond.png" id="1_so3mg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qayo"]
+size = Vector2(5.8456, 20.2963)
+
+[node name="Water" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.00006, 3.05176e-05)
+scale = Vector2(0.571258, 0.571258)
+texture = ExtResource("1_so3mg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5, 2.5)
+rotation = -3.14159
+scale = Vector2(34.0427, -5.37043)
+shape = SubResource("RectangleShape2D_0qayo")

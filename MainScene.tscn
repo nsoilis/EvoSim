@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjhywhhlq8ra2"]
+
+[ext_resource type="PackedScene" uid="uid://clgbt8qey0ch3" path="res://scenes/environment/Water.tscn" id="1_obdkr"]
+[ext_resource type="PackedScene" uid="uid://cmglr1ujrhlmn" path="res://scenes/creatures/Creature.tscn" id="2_v5svl"]
+
+[node name="Scene" type="Node2D"]
+
+[node name="CreatureManager" type="Node" parent="."]
+
+[node name="PlantManager" type="Node" parent="."]
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Bushes" type="StaticBody2D" parent="World"]
+
+[node name="Water" parent="World" instance=ExtResource("1_obdkr")]
+position = Vector2(981, 127)
+
+[node name="Water2" parent="World" instance=ExtResource("1_obdkr")]
+position = Vector2(155, 533)
+rotation = -2.70011
+scale = Vector2(0.562198, 0.562198)
+
+[node name="Bounds" type="StaticBody2D" parent="World"]
+
+[node name="Creature2" parent="." instance=ExtResource("2_v5svl")]
+position = Vector2(934, 238)
+scale = Vector2(0.229551, 0.229551)
+
+[node name="Creature" parent="." instance=ExtResource("2_v5svl")]
+position = Vector2(693, 367)
+
+[node name="Creature3" parent="." instance=ExtResource("2_v5svl")]
+position = Vector2(842, 406)
+
+[node name="Creature4" parent="." instance=ExtResource("2_v5svl")]
+position = Vector2(1011, 326)
+
+[node name="Creature5" parent="." instance=ExtResource("2_v5svl")]
+position = Vector2(80, 606)
+
+[node name="Creature6" parent="." instance=ExtResource("2_v5svl")]
+position = Vector2(28, 26)

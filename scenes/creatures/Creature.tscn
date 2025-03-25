@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmglr1ujrhlmn"]
+
+[ext_resource type="Script" path="res://scripts/creature.gd" id="1_we4iu"]
+[ext_resource type="Texture2D" uid="uid://ct5wr38n4k2pk" path="res://scenes/creatures/Dave.png" id="2_ixlea"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aw6n3"]
+radius = 80.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pgtyj"]
+radius = 91.1976
+
+[node name="Creature" type="CharacterBody2D"]
+scale = Vector2(0.222536, 0.222536)
+script = ExtResource("1_we4iu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ixlea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -2)
+shape = SubResource("CircleShape2D_aw6n3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_pgtyj")
+debug_color = Color(0.614164, 0.48548, 0.621163, 0.42)
